@@ -37,7 +37,10 @@ public class App {
     public static void main(String[] args) throws IOException {
         App app = new App(FileToolsFactory.getFileSort("simple"),
                 FileToolsFactory.getFileGenerator("random"));
-        app.run(10_000L, 150, String::compareTo);
+
+        long numberOfLines = 10_000L;
+        int lineLength = 150;
+        app.run(numberOfLines, lineLength, String::compareTo);
     }
 
     /**

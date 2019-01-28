@@ -87,7 +87,7 @@ class SimpleFileSortImpl implements FileSort {
                 line = raf.readLine();
                 if (line == null) break;
                 lines.add(line);
-                writtenBytes = line.length() * 2;
+                writtenBytes += line.getBytes().length;
             }
 
             bw = Files.newBufferedWriter(chunkFile.toPath());
